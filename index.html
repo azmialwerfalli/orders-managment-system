@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="home">
+        <div class="container"><div class="logo" href="#">Unilink</div></div>
+        <div class="container"><div class="menu-div" href="#">Menu</div></div>
+    </div>
+
+    <div class="buttons">
+        <form action="#new-client">
+<button class="button-80" role="button" class="open-button" onclick="openForm()"> 
+    <div class="icons">
+        <i class="fa-solid fa-user-plus"></i>
+    </div>
+     New Client
+</button>
+</form>
+<button class="button-80" role="button">
+    <div class="icons">
+        <i class="fa-solid fa-user-check"></i>
+    </div>
+    Check Client
+</button>
+<button class="button-80" role="button">
+    <div class="icons">
+        <i class="fa-solid fa-check-to-slot"></i> 
+    </div>
+   Order's Status
+</button>
+     </div>
+
+     <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <fieldset>
+              <legend>Add New Order</legend>
+              <div class="single-input">
+                <div class="form-input-container">
+                <label for="capacity">Order Number</label>
+                <input type="number" id="capacity" value="1" min="1" max="10" step="1">
+            </div>
+              </div>
+              <div class="double-input">
+                <div class="form-input-container">
+                  <label for="fname">Name</label>
+                  <input type="text" id="fname" placeholder="Jan" minlength="3" required>
+                </div>
+                <div class="form-input-container">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="123456789" required>
+                  </div>
+                </div>
+                
+              <div class="double-input">
+
+                <div class="form-input-container">
+                    <div class="form-input-container">
+                        <label for="hotelcity">Address</label>
+                        <select id="hotelcity">
+                          <option value="Warsaw">Warsaw</option>
+                          <option value="Cracow">Cracow</option>
+                          <option value="Wroclaw">Wroclaw</option>
+                          <option value="Poznan">Poznan</option>
+                        </select>
+                      </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="double-input">
+                <div class="form-input-container">
+                  <label for="hotelcity">Address</label>
+                  <select id="hotelcity">
+                    <option value="Warsaw">Warsaw</option>
+                    <option value="Cracow">Cracow</option>
+                    <option value="Wroclaw">Wroclaw</option>
+                    <option value="Poznan">Poznan</option>
+                  </select>
+                </div>
+                <div class="form-input-container">
+                  <label for="capacity">For (capacity)</label>
+                  <input type="number" id="capacity" value="1" min="1" max="10" step="1">
+                </div>
+              </div>
+              <div class="double-input">
+                <div class="form-input-container date-select">
+                  <label for="">Start date</label>
+                  <select name="start-date-day">
+                    <option disabled selected>Day</option>
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <select name="start-date-month">
+                    <option disabled selected>Month</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="Spetember">September</option>
+                    <option value="October">October</option>
+                  </select>
+                </div>
+                <div class="form-input-container date-select">
+                  <label for="">End date</label>
+                  <select name="end-date-day">
+                    <option disabled selected>Day</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                  </select>
+                  <select name="end-date-month">
+                    <option disabled selected>Month</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="Spetember">September</option>
+                    <option value="October">October</option>
+                  </select>
+               
+                   
+                </div>
+              </div>
+              <div class="Midbuttons">
+                <button type="submit" id="new-client">Save</button> 
+                <button type="cancel" onclick="closeForm()" class="closeBt">Close</button>
+            </div>
+            </fieldset>
+            
+           
+          </form>
+        </div>
+    <!-- Menu Stuff -->
+    <div class="menu">
+        <div class="background">Menu</div>
+        <div class="exit"><img src="./assets/x.svg" alt="" srcset=""></div>
+        <div class="menu-container">
+            <ul class="options">
+                <li class="nav"><a href="#" class="nav-link">Home </a></li>
+                <li class="nav"><a href="#" class="nav-link">Orders </a></li>
+                <li class="nav"><a href="#" class="nav-link">Inventory </a></li>
+                <li class="nav"><a href="#" class="nav-link">Clients </a></li>
+            </ul>
+        </div>
+        <div class="menu-container right">
+            <div class="information">
+                <p class="title">New Orders</p>
+                <p class="description">10</p>
+
+            </div>
+            <div class="information">
+                <p class="title">In Progress</p>
+                <p class="description">5</p>
+
+            </div>
+            <div class="information">
+                <p class="title">Delivered</p>
+                <p class="description">3</p>
+                <!-- <div class="social-medias">
+                    <a href="" class="social-media">twitter</a>
+                    <a href="" class="social-media">youtube</a>
+                </div> -->
+            </div>
+            <div class="information">
+                <p class="title">Canceled</p>
+                <p class="description">2</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+</body>
+</html>
